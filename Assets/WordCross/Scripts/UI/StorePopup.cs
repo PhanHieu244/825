@@ -23,14 +23,14 @@ namespace WordCross
 
 		public override void OnShowing(object[] inData)
 		{
-			IAPManager.Instance.OnProductPurchased += OnProductPurchases;
+			//IAPManager.Instance.OnProductPurchased += OnProductPurchases;
 		}
 
 		public override void OnHiding()
 		{
 			base.OnHiding();
 
-			IAPManager.Instance.OnProductPurchased -= OnProductPurchases;
+			//IAPManager.Instance.OnProductPurchased -= OnProductPurchases;
 		}
 
 		#endregion
@@ -38,6 +38,13 @@ namespace WordCross
 		#region Private Methods
 
 		private void OnProductPurchases(string productId)
+		{
+			Hide(false);
+
+			PopupManager.Instance.Show("product_purchased");
+		}
+		
+		private void OnProductPurchases(string productId, int point)
 		{
 			Hide(false);
 

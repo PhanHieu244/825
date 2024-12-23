@@ -208,12 +208,7 @@ namespace WordCross
 			// Check if we should show an ad
 			if (NumLevelsTillAdShows <= 0)
 			{
-               
-                if (Advertisements.Instance.IsInterstitialAvailable())
-                {
-					Advertisements.Instance.ShowInterstitial();
-					NumLevelsTillAdShows = numLevelsTillAd;
-				}
+				
 			}
 
 			// Decrease the number of levels until an ad shows

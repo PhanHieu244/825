@@ -5,7 +5,7 @@ using UnityEditor;
 
 namespace dotmob
 {
-	[CustomEditor(typeof(MobileAdsManager))]
+	//[CustomEditor(typeof(MobileAdsManager))]
 	public class MobileAdsManagerEditor : Editor
 	{
 		//#region Public Methods

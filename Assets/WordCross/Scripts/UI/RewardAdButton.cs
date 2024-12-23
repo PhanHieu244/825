@@ -58,7 +58,7 @@ namespace WordCross
    //         else
    //         {
 				
-				Advertisements.Instance.ShowRewardedVideo(CompleteMethod);
+				//Advertisements.Instance.ShowRewardedVideo(CompleteMethod);
           //  }
 
 		}

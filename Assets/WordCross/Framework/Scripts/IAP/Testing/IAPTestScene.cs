@@ -32,7 +32,7 @@ namespace dotmob
 			{
 				testButtonPool = new ObjectPool(testButtonPrefab.gameObject, 1, testButtonContainer);
 
-				if (IAPManager.Instance.IsInitialized)
+				/*if (IAPManager.Instance.IsInitialized)
 				{
 					SetupButtons();
 				}
@@ -41,7 +41,7 @@ namespace dotmob
 					IAPManager.Instance.OnInitializedSuccessfully += OnIAPInitialized;
 				}
 
-				IAPManager.Instance.OnProductPurchased += OnProductPurchased;
+				IAPManager.Instance.OnProductPurchased += OnProductPurchased;*/
 			}
 			else
 			{

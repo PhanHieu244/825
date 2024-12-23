@@ -88,4 +88,12 @@
             percentWindows = settings.percentWindows;
         }
     }
+    
+    public enum SupportedAdTypes
+    {
+        Rewarded,
+        None,
+        Banner,
+        Interstitial
+    }
 }

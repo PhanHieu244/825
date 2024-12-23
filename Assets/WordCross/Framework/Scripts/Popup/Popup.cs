@@ -91,7 +91,7 @@ namespace dotmob
 
 		public void Hide(bool cancelled)
 		{
-			Advertisements.Instance.ShowBanner(BannerPosition.BOTTOM, BannerType.Banner);
+			//Advertisements.Instance.ShowBanner(BannerPosition.BOTTOM, BannerType.Banner);
 			Hide(cancelled, null);
 		}
 

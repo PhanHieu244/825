@@ -5,7 +5,7 @@ using UnityEditor;
 
 namespace dotmob
 {
-	[CustomEditor(typeof(IAPProductButton))]
+	/*[CustomEditor(typeof(IAPProductButton))]
 	public class IAPProductButtonEditor : Editor
 	{
 		#region Inspector Variables
@@ -112,5 +112,5 @@ namespace dotmob
 		}
 
 		#endregion
-	}
+	}*/
 }

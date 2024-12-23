@@ -12,7 +12,7 @@
 
         public static void Write(object message)
         {
-            if (Advertisements.Instance.debug == true)
+            /*if (Advertisements.Instance.debug == true)
             {
                 if (instance == null)
                 {
@@ -22,12 +22,12 @@
                     logMessage += ("\nDebugMessages instance created on DebugMessagesHolder");
                 }
                 logMessage += "\n" + message.ToString();
-            }
+            }*/
         }
 
         void OnGUI()
         {
-            if (Advertisements.Instance.debug == true)
+            /*if (Advertisements.Instance.debug == true)
             {
                 if (logMessage != null)
                 {
@@ -37,7 +37,7 @@
                         logMessage = null;
                     }
                 }
-            }
+            }*/
         }
     }
 }

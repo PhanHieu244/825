@@ -13,7 +13,7 @@ namespace dotmob
 		private void Start()
 		{
 			gameObject.SetActive(Application.platform == RuntimePlatform.IPhonePlayer || Application.platform == RuntimePlatform.OSXPlayer);
-			gameObject.GetComponent<Button>().onClick.AddListener(IAPManager.Instance.RestorePurchases);
+			//gameObject.GetComponent<Button>().onClick.AddListener(IAPManager.Instance.RestorePurchases);
 		}
 
 		#endregion

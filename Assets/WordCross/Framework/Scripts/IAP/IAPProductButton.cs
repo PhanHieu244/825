@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using WordCross;
 
 #if DM_IAP
 using UnityEngine.Purchasing;
@@ -16,7 +17,7 @@ namespace dotmob
 	{
 		#region Inspector Variables
 
-		[SerializeField] private string	productId		= "";
+		[SerializeField] private int	productId		= 0;
 		[SerializeField] private Text	titleText		= null;
 		[SerializeField] private Text	descriptionText	= null;
 		[SerializeField] private Text	priceText		= null;
@@ -42,11 +43,11 @@ namespace dotmob
 			button = gameObject.GetComponent<Button>();
 
 			button.onClick.AddListener(OnClicked);
-
+			button.interactable = true;
 			UpdateButton();
 			
-			IAPManager.Instance.OnInitializedSuccessfully	+= UpdateButton;
-			IAPManager.Instance.OnProductPurchased			+= OnProductPurchased;
+			/*IAPManager.Instance.OnInitializedSuccessfully	+= UpdateButton;
+			IAPManager.Instance.OnProductPurchased			+= OnProductPurchased;*/
 		}
 
 		#endregion
@@ -55,6 +56,25 @@ namespace dotmob
 
 		private void OnClicked()
 		{
+			switch (productId)
+			{
+				case 0:
+					GameController.Instance.GiveCoinsIAP(240);
+					global:: IAPManager.Instance.BuyProductID(IAPKey.PACK1_RE);
+					break;
+				case 1:
+					GameController.Instance.GiveCoinsIAP(720);
+					global::IAPManager.Instance.BuyProductID(IAPKey.PACK2_RE);
+					break;
+				case 2:
+					GameController.Instance.GiveCoinsIAP(1340);
+					global::IAPManager.Instance.BuyProductID(IAPKey.PACK3_RE);
+					break;
+				case 3:
+					GameController.Instance.GiveCoinsIAP(2940);
+					global::IAPManager.Instance.BuyProductID(IAPKey.PACK4_RE);
+					break;
+			}
 #if DM_IAP
 			IAPManager.Instance.BuyProduct(productId);
 #endif
@@ -62,17 +82,17 @@ namespace dotmob
 
 		private void OnProductPurchased(string id)
 		{
-			if (productId == id)
+			/*if (productId == id)
 			{
 				UpdateButton();
-			}
+			}*/
 		}
 
 		private void UpdateButton()
 		{
-			button.interactable = false;
+			//button.interactable = false;
 
-			if (IAPManager.Instance.IsInitialized)
+			//if (IAPManager.Instance.IsInitialized)
 			{
 #if DM_IAP
 				Product product = IAPManager.Instance.GetProductInformation(productId);

@@ -16,7 +16,7 @@ public class Implementation : MonoBehaviour
     /// </summary>
     void Awake()
     {
-        Advertisements.Instance.Initialize();
+      //  Advertisements.Instance.Initialize();
     }
 
 
@@ -30,12 +30,12 @@ public class Implementation : MonoBehaviour
     /// </summary>
     public void ShawBanner()
     {
-        Advertisements.Instance.ShowBanner(BannerPosition.BOTTOM);
+        //Advertisements.Instance.ShowBanner(BannerPosition.BOTTOM);
     }
 
     public void HideBanner()
     {
-        Advertisements.Instance.HideBanner();
+        //Advertisements.Instance.HideBanner();
     }
 
 
@@ -44,7 +44,7 @@ public class Implementation : MonoBehaviour
     /// </summary>
     public void ShowInterstitial()
     {
-        Advertisements.Instance.ShowInterstitial();
+        //Advertisements.Instance.ShowInterstitial();
     }
 
     /// <summary>
@@ -52,7 +52,7 @@ public class Implementation : MonoBehaviour
     /// </summary>
     public void ShowRewardedVideo()
     {
-        Advertisements.Instance.ShowRewardedVideo(CompleteMethod);
+        //Advertisements.Instance.ShowRewardedVideo(CompleteMethod);
     }
 
 
@@ -61,7 +61,7 @@ public class Implementation : MonoBehaviour
     /// </summary>
     void Update()
     {
-        if (Advertisements.Instance.IsInterstitialAvailable())
+        /*if (Advertisements.Instance.IsInterstitialAvailable())
         {
             intersttialButton.interactable = true;
         }
@@ -77,7 +77,7 @@ public class Implementation : MonoBehaviour
         else
         {
             rewardedButton.interactable = false;
-        }
+        }*/
     }
 
     private void CompleteMethod(bool completed)

@@ -58,7 +58,7 @@ namespace dotmob
 		public void ShowNoAd(string id)
 		{
 			Show(id, null, null);
-			Advertisements.Instance.HideBanner();
+			//Advertisements.Instance.HideBanner();
 		}
 
 		public void Show(string id, object[] inData)
